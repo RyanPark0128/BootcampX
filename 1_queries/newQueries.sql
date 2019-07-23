@@ -1,3 +1,4 @@
-SELECT name, email, phone
+SELECT students.name as student_name, email, cohorts.name as cohort_name
 FROM students
-WHERE github IS NULL
+JOIN cohorts ON cohorts.id = cohort_id
+WHERE cohorts.start_date != students.start_date; 
